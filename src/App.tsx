@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Hamster from './icons/Hamster';
-import { binanceLogo, dailyCipher, dailyCombo, dailyReward, dollarCoin, hamsterCoin, mainCharacter } from './images';
+import { binanceLogo, dailyCipher, dollarCoin, mainCharacter } from './images';
 import Info from './icons/Info';
 import Settings from './icons/Settings';
 import Mine from './icons/Mine';
 import Friends from './icons/Friends';
 import Coins from './icons/Coins';
-import { Link } from 'react-router-dom';
+
 
 const App: React.FC = () => {
   const levelNames = [
@@ -42,34 +42,34 @@ const App: React.FC = () => {
   const pointsToAdd = 1;
   const profitPerHour = 0;
 
-  const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
-  const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
-  const [dailyComboTimeLeft, setDailyComboTimeLeft] = useState("");
+  // const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
+  // const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
+  // const [dailyComboTimeLeft, setDailyComboTimeLeft] = useState("");
 
-  const calculateTimeLeft = (targetHour: number) => {
-    const now = new Date();
-    const target = new Date(now);
-    target.setUTCHours(targetHour, 0, 0, 0);
+  // const calculateTimeLeft = (targetHour: number) => {
+  //   const now = new Date();
+  //   const target = new Date(now);
+  //   target.setUTCHours(targetHour, 0, 0, 0);
 
-    if (now.getUTCHours() >= targetHour) {
-      target.setUTCDate(target.getUTCDate() + 1);
-    }
+  //   if (now.getUTCHours() >= targetHour) {
+  //     target.setUTCDate(target.getUTCDate() + 1);
+  //   }
 
-    const diff = target.getTime() - now.getTime();
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  //   const diff = target.getTime() - now.getTime();
+  //   const hours = Math.floor(diff / (1000 * 60 * 60));
+  //   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-    const paddedHours = hours.toString().padStart(2, '0');
-    const paddedMinutes = minutes.toString().padStart(2, '0');
+  //   const paddedHours = hours.toString().padStart(2, '0');
+  //   const paddedMinutes = minutes.toString().padStart(2, '0');
 
-    return `${paddedHours}:${paddedMinutes}`;
-  };
+  //   return `${paddedHours}:${paddedMinutes}`;
+  // };
 
   useEffect(() => {
     const updateCountdowns = () => {
-      setDailyRewardTimeLeft(calculateTimeLeft(0));
-      setDailyCipherTimeLeft(calculateTimeLeft(19));
-      setDailyComboTimeLeft(calculateTimeLeft(12));
+      // setDailyRewardTimeLeft(calculateTimeLeft(0));
+      // setDailyCipherTimeLeft(calculateTimeLeft(19));
+      // setDailyComboTimeLeft(calculateTimeLeft(12));
     };
 
     updateCountdowns();

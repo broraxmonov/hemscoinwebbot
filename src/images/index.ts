@@ -6,7 +6,7 @@ import dailyCipher from "./wallet.jpg";
 import dailyCombo from "./daily-combo.png";
 import mainCharacter from "./rem.png";
 import hamsterCoin from "./hemscoin.png";
-import wallet from "./wallet.jpg";
+
 
 
 export {
