@@ -1,0 +1,72 @@
+.progress-gradient {
+  background: linear-gradient(to right, #90ef89, #d692dd, #726edd);
+}
+
+.top-glow {
+  /* box-shadow: 0 -26px 40px rgba(0, 0, 0, 0.3); */
+}
+
+/* Define the keyframes for the blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the dot class */
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  animation: blink 1s infinite;
+}
+.div-shadow {
+  box-shadow: 0px 0px 4px black;
+}
+.div-blue{
+  background-color: rgb(1, 1, 1) !important;
+}
+.circle-outer {
+  background: linear-gradient(to bottom, #027ac0, #0e5dab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  height: 70vw;
+  max-width: 260px;
+  max-height: 260px;
+}
+.bg-black{
+  background-color: #3781D6 !important;
+}
+.circle-inner {
+  background: radial-gradient(circle, #3781D6,#3781D6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
